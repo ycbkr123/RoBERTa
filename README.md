@@ -1,9 +1,9 @@
-** RoBERTa(PyTorch)**
+**RoBERTa(PyTorch)**
 
 본 연구는 기존 데이터 증강 기법 중 하나인 GANs이 아닌 LLM모델로 설계된 ChatGPT-4를 이용하여 생성된 뉴스 기사 데이터(semantic Data)가 모델 성능에 영향을 주는지에 관한 내용입니다.
 
 
-** Project Overview**
+**Project Overview**
 
 * BBCSport 데이터 세트의 뉴스 기사를 주제로 분류하기 위한 Roberta 기반 모델을 구성하고 미세 조정하여 교육 데이터의 60%로 97.3%의 높은 정확도를 달성했습니다
 * 학습 데이터를 데이터 세트의 60%에서 50%로 줄이는 영향을 조사하여 더 적은 데이터로 모델 성능을 평가했습니다.
@@ -11,14 +11,14 @@
 * 기준 교육, 데이터 교육 감소, 합성 데이터 증강, 합성 테스트 세트 평가 및 결합 데이터 세트 분석을 포함한 여러 실험을 수행했습니다.
 * 실험 결과, 특히 훈련 데이터가 제한된 경우 합성 데이터 증강을 통해 모델 성능이 크게 향상됨을 보여줍니다
 
-** Data generation with ChatGPT-4**
+**Data generation with ChatGPT-4**
 
 * GPT-4가 우리의 5개 범주에 걸쳐 균형 잡힌 다양한 스포츠 뉴스 기사를 생산하도록 안내하기 위한 프롬프트를 만들었습니다
 * 합성 데이터의 더 높은 다양성을 보장하고 반복을 피하기 위해 제로샷 접근 방식을 채택하여 모델이 예제와 너무 가깝게 생성하는 것을 방지했습니다.
 * 대신 BBCSport 데이터 세트의 기사 구조와 스타일을 따르는 기사를 생성하도록 모델을 학습했습니다
 * OpenAI의 API 사용과 관련된 비용을 피하기 위해 ChatGPT 인터페이스를 활용했습니다.
 
-** Experimental Setup**
+**Experimental Setup**
 
 1. Baseline(원본 데이터의 60%, 합성 없음):
    * Train: BBC 원본 데이터의 60%
@@ -47,7 +47,7 @@
    * Test: 결합된 데이터 세트의 25%
    * Puroise: 전체 데이터 세트가 합성 데이터로 증강될 때 모델의 성능을 평가합니다.
 
-** Experimental Results**
+**Experimental Results**
 ![image](https://github.com/ycbkr123/RoBERTa/assets/73626645/19fbe923-6c74-4a36-bc9b-bb1b3f1733b1)
 
 
