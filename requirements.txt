@@ -1,0 +1,11 @@
+torch
+torchvision
+torchaudio
+pytorch-lightning
+pandas
+matplotlib
+transformers
+tokenizers
+scikit-learn
+seaborn
+chardet
